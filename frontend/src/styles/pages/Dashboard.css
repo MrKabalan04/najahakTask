@@ -1,0 +1,150 @@
+.dashboard {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+thead {
+  background: #111;
+}
+
+thead th {
+  color: #fff;
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+tbody td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #f9f9fa;
+}
+
+/* Status badge styling */
+td:nth-child(2) {
+  font-weight: 600;
+}
+
+.status-New {
+  color: #b8860b;
+}
+
+.status-In\ Progress {
+  color: #1565c0;
+}
+
+.status-Done {
+  color: #2e7d32;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #2a2a2a;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background: #ccc;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logout-button {
+  background: #111;;
+  color: #ccc;
+}
+
+.logout-button:hover {
+  background: transparent !important;
+  border: 1px solid #111 !important;
+  color: #111 !important;
+}
+
+.create-request-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.create-request-button {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead {
+    display: none;
+  }
+  tbody tr {
+    margin-bottom: 16px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 12px;
+  }
+  tbody td {
+    border: none;
+    padding: 6px 4px;
+  }
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    display: inline-block;
+    width: 100px;
+    color: #888;
+  }
+}
